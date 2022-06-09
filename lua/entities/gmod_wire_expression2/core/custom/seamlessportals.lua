@@ -80,8 +80,6 @@ e2function array createPortalPair(vector pos1, angle ang1, vector pos2, angle an
 	local portal1 = SeamlessPortalsCore.CreatePortal(self, Vector(pos1[1],pos1[2],pos1[3]), Angle(ang1[1], ang1[2], ang1[3]), true)
 	local portal2 = SeamlessPortalsCore.CreatePortal(self, Vector(pos2[1],pos2[2],pos2[3]), Angle(ang2[1], ang2[2], ang2[3]), true)
 	portal1:LinkPortal(portal2)
-	gamemode.Call( "PlayerSpawnedVehicle", self.player, portal1 )
-	gamemode.Call( "PlayerSpawnedVehicle", self.player, portal2 )
 
 	return {portal1, portal2}
 end
